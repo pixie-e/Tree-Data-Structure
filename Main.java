@@ -1,7 +1,7 @@
 /**
 * Assignment 9: Tree Data Structure (Human Resources)
 * @author Elysium "Pixie" Jones
-* 3/XX/26
+* 3/14/26
 * 
 * Purpose: 
 * Nintendo’s human resources data is disorganized, full of duplicates,
@@ -25,44 +25,6 @@ public class Main
 	public static void main(String[] args) 
 	{
 		System.out.println();
-
-		/*
-		For testing, try to add Berta in robots twice (no duplicates should
-		occur). Also tests whether proper conversion occurs in the new
-		PersonImperialSet. Values given here are metric (cm and kg).
-		*/
-		Person berta = new Person("Berta", 158.50, 68.4);
-		/*SortedTreeSet robots = new SortedTreeSet();
-		robots.add(berta);
-		robots.add(new Person("Josef", 167.64, 92.5));
-		robots.add(new Person("Mr. H", 448.06, 122.8));
-		robots.add(berta);*/
-		//System.out.println(robots.toString());
-/*
-		//Notice: Berta only appears once, as it should. No duplicates!
-		// And, the metric measurements (cm and kg) are correctly converted to
-		// inches and pounds!
-		System.out.println("Robots List:");
-		System.out.println(robots.toString());
-		System.out.println();
-		*/
-
-		//for testing, spaceshipCrew is out of alphabetical order
-		// (Avali should be between Apex and Avian)
-		/*SortedTreeSet spaceshipCrew = new SortedTreeSet();
-		spaceshipCrew.add(new Person("Apex", 170.0, 135.0));
-		spaceshipCrew.add(new Person("Avian", 165.1, 55.1));
-		spaceshipCrew.add(new Person("Floran", 150.2, 64.2));
-		spaceshipCrew.add(new Person("Glitch", 175.3, 110.3));
-		spaceshipCrew.add(new Person("Human", 172.4, 83.4));
-		spaceshipCrew.add(new Person("Hylotl", 180.5, 70.5));
-		spaceshipCrew.add(new Person("Novakid", 110.6, 44.6));
-		spaceshipCrew.add(new Person("Avali", 90.7, 13.7));
-
-		//Notice: Avali is correctly placed between Apex and Avian!
-		System.out.println("Spaceship Crew List:");
-		System.out.println(spaceshipCrew.toString());
-		//System.out.println();
 		
 		/* 
 		If no command line argument is used (args is length 0 or less),

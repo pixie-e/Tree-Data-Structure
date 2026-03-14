@@ -1,7 +1,7 @@
 /**
 * Assignment 9: Tree Data Structure (Human Resources)
 * @author Elysium "Pixie" Jones
-* 3/XX/26
+* 3/14/26
 * 
 * class named Person. This will be a very basic class with three
 * attributes for storing name, height, and weight information. This class
@@ -13,7 +13,7 @@
 * <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html">Searched: java comparable interface. This link helped with documentation.</a>
 * <a href="https://www.w3schools.com/java/java_advanced_sorting.asp">Searched: java comparable interface. This link helped with setting up the compareTo method.</a>
 * 
-* Notes: This is the submission for PART 2.
+* Notes: 
 */
 import java.util.Objects;
 import java.util.Comparator;
@@ -62,7 +62,7 @@ public class Person implements Comparable<Person>
 	public String toString()
 	{
 		//note: this formatted spacing matches that of the given hr.txt file
-		return String.format("%-8s%16.1f%11.1f\n",this.name, this.height, 
+		return String.format("%-8s%11.1f%15.1f\n",this.name, this.height, 
 																this.weight);
 	}
 

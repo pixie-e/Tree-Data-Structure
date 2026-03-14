@@ -1,7 +1,7 @@
 /**
  *  Assignment 9: Tree Data Structure (Human Resources)
  * @author Elysium "Pixie" Jones
- * 3/XX/26
+ * 3/14/26
  */
 class SortedTreeSet implements SortedTreeSetInterface
 {
@@ -18,6 +18,7 @@ class SortedTreeSet implements SortedTreeSetInterface
 	{
 		this.person = p;
 	}
+
 
 	public Person getPerson() { return this.person; }
 
@@ -99,7 +100,7 @@ class SortedTreeSet implements SortedTreeSetInterface
 	public String toString()
 	{
 		
-		String personsStringData = ("Name    Height (cm)     Weight (kg)\n");
+		String personsStringData = ("Name    Height (cm)    Weight (kg)\n");
 		personsStringData += gatherBranches(root);
 		return personsStringData;
 
