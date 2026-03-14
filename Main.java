@@ -1,115 +1,18 @@
 /**
-* Assignment 7: Human Resources (PART 2 submission)
+* Assignment 9: Tree Data Structure (Human Resources)
 * @author Elysium "Pixie" Jones
-* 2/27/26
+* 3/XX/26
 * 
 * Purpose: 
 * Nintendo’s human resources data is disorganized, full of duplicates,
 * and in metric! The information is stored in a database file, hr.txt and it’s
-* your task to create two new versions of it: 
-* One version will be in alphabetical order
-* One version will be converted from metric to imperial units
-* And both versions will have no duplicates
+* your task to put it in alphabetical order, with no duplicates
 * 
 * Requirements:
-* =PART 1=
-* - Write a class named Person. This will be a very basic class with three
-* attributes for storing name, height, and weight information. This class
-* should also have a toString method that returns the Person data in a
-* database-ready String format.
-* 
-* - Write an interface named PersonList. The interface should have
-* two abstract methods:
-* 	> add – This method takes a Person as input and returns void.
-* 	> get – This method takes an int as input and returns a Person at the 
-* 			corresponding index of the input int.
-* 
-* - Write a class named, PersonSet, that implements the interface PersonList.
-* Use an ArrayList and fill in the add and get methods. You may not use any
-* built in Set-type Java classes.
-* 
-* - In addition to implementing add and get methods, PersonSet must make sure
-* that no duplicate Persons are added. If you want to use the ArrayList’s
-* built-in contains method to make this easier, you will need to add an equals
-* method to Person.
-* 
-* - In the main method in Main:
-* 	> Instantiate a single Person object as a test. You can make up the data
-* 	  passed to the constructor. (See berta)
-* 	> Instantiate a PersonSet object as a test. (See robots and spaceshipCrew)
-* 	> Read data in from the file hr.txt and display it on the command prompt.
-* 	  (passed through command line argument). (Note I created a method printList
-* 	  to help with this. printList is in PersonSet.java)
-* 
-* =PART 2=
-* - Add a toString method to PersonSet that loops through the ArrayList,
-* concatenating the Persons data to a String variable, which is then returned.
-* The format needs to match the format of hr.txt.
-* 
-* - Write a class named, PersonOrderedSet. This class should extend PersonSet
-* and override the add method to add Persons in alphabetical order by name.
-* 
-* - Write a class named, PersonImperialSet. This class should extend PersonSet
-* and override the add method to convert the height measurement from
-* centimeters to inches and the weight from kilograms to pounds.
-* (Look up the conversions online.)
-* 
-* - Modify Main to:
-* 	> Instantiate a PersonOrderedSet and a PersonImperialSet, instead of the 
-* 	  PersonSet.
-* 	> Read in the data from the file, use it to populate both set objects with
-* 	  Persons, and then write out the data into two separate output files
-* 	  (one ordered and one imperial).
-* 	> I recommend adding methods to the classes to get the data in a text
-* 	  format for writing to file. You should think about which class is most
-* 	  appropriate for this method (or methods) to be implemented in order to
-* 	  reduce code duplication.
-* 	> Output the formatted data with header to two separate files named:
-* 	  hr_imperial_set_output.txt and hr_ordered_set_output.txt
-* 	> Lastly, output the ordered data and the imperial data to the screen/console,
-* 	  nicely formatted in rows and labeled columns (this nice formatting should
-* 	  already be in use if you wrote your toString methods well).
 * 
 * Source(s): <a href="https://www.geeksforgeeks.org/java/command-line-arguments-in-java/">Reviewed command line arguments with search: using command line input java</a>
 * 
-* Notes: This is the submission for PART 2.
-*/
-
-/*
-This code is provided to give you a
-starting place. It should be modified.
-No further imports are needed.
-To earn full credit, you must also
-answer the following questions:
-
-Q1: Car and Engine are related
-by which, Inheritance or Composition?
-	Composition - a car HAS an engine and can use
-	it as a component, but a car isn't characteristically
-	an engine
-
-Q2: Color and Red are related
-by which, Inheritance or Composition?
-	Inheritance - red IS a color and can do the
-	same things any other color can do
-
-Q3: Shirt and Clothing are related
-by which, Inheritance or Composition?
-	Inheritance - a shirt IS clothing and works
-	as a type of clothing
-
-Q4: Furniture and Desk are related
-by which, Inheritance or Composition?
-	Inheritance - a desk IS a piece of furniture
-	and even though "furniture" could mean a lot of things,
-	a desk works as a piece of furniture, even if
-	it has different specific uses compared to other furniture
-
-Q5: CellPhone and Battery are related
-by which, Inheritance or Composition?
-	Composition - a cell phone HAS a battery and uses it
-	as a component, but a cell phone isn't characteristically
-	a battery
+* Notes: This is the submission for Tree Data Structure.
 */
 
 import java.io.File;
@@ -129,22 +32,24 @@ public class Main
 		PersonImperialSet. Values given here are metric (cm and kg).
 		*/
 		Person berta = new Person("Berta", 158.50, 68.4);
-		/*PersonSet robots = new PersonImperialSet();
+		/*SortedTreeSet robots = new SortedTreeSet();
 		robots.add(berta);
 		robots.add(new Person("Josef", 167.64, 92.5));
 		robots.add(new Person("Mr. H", 448.06, 122.8));
-		robots.add(berta);
-
+		robots.add(berta);*/
+		//System.out.println(robots.toString());
+/*
 		//Notice: Berta only appears once, as it should. No duplicates!
 		// And, the metric measurements (cm and kg) are correctly converted to
 		// inches and pounds!
 		System.out.println("Robots List:");
 		System.out.println(robots.toString());
 		System.out.println();
-*/
+		*/
+
 		//for testing, spaceshipCrew is out of alphabetical order
 		// (Avali should be between Apex and Avian)
-		/*PersonSet spaceshipCrew = new PersonOrderedSet();
+		SortedTreeSet spaceshipCrew = new SortedTreeSet();
 		spaceshipCrew.add(new Person("Apex", 170.0, 135.0));
 		spaceshipCrew.add(new Person("Avian", 165.1, 55.1));
 		spaceshipCrew.add(new Person("Floran", 150.2, 64.2));
@@ -157,8 +62,8 @@ public class Main
 		//Notice: Avali is correctly placed between Apex and Avian!
 		System.out.println("Spaceship Crew List:");
 		System.out.println(spaceshipCrew.toString());
-		System.out.println();
-*/		
+		//System.out.println();
+		
 		/* 
 		If no command line argument is used (args is length 0 or less),
 		inform user that they need to include a readable file in the 

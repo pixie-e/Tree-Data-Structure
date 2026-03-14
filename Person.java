@@ -1,7 +1,7 @@
 /**
-* Assignment 7: Human Resources (PART 2 submission)
+* Assignment 9: Tree Data Structure (Human Resources)
 * @author Elysium "Pixie" Jones
-* 2/27/26
+* 3/XX/26
 * 
 * class named Person. This will be a very basic class with three
 * attributes for storing name, height, and weight information. This class
@@ -62,7 +62,7 @@ public class Person implements Comparable<Person>
 	public String toString()
 	{
 		//note: this formatted spacing matches that of the given hr.txt file
-		return String.format("%-8s%-16.1f%-11.1f",this.name, this.height, 
+		return String.format("%-8s%16.1f%11.1f\n",this.name, this.height, 
 																this.weight);
 	}
 
