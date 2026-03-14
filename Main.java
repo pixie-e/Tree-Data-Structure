@@ -49,7 +49,7 @@ public class Main
 
 		//for testing, spaceshipCrew is out of alphabetical order
 		// (Avali should be between Apex and Avian)
-		SortedTreeSet spaceshipCrew = new SortedTreeSet();
+		/*SortedTreeSet spaceshipCrew = new SortedTreeSet();
 		spaceshipCrew.add(new Person("Apex", 170.0, 135.0));
 		spaceshipCrew.add(new Person("Avian", 165.1, 55.1));
 		spaceshipCrew.add(new Person("Floran", 150.2, 64.2));
@@ -86,8 +86,8 @@ public class Main
 		Catches IOException if one occurs, displays problem, and
 		exits program.
 		*/
-/*		PersonOrderedSet inputOrderedSet = new PersonOrderedSet();
-		PersonImperialSet inputImperialSet = new PersonImperialSet();
+		SortedTreeSet inputOrderedSet = new SortedTreeSet();
+		
         try
 		{
 			File inputFile = new File(args[0]);
@@ -107,14 +107,13 @@ public class Main
 				double height = fileReader.nextDouble();
 				double weight = fileReader.nextDouble();
 				Person tempPerson = new Person(name, height, weight);
-				inputImperialSet.add(tempPerson);
+			
 				inputOrderedSet.add(tempPerson);
 			}
 			//output the ordered data and the imperial data to the screen/console
 			System.out.println(args[0]+" Ordered List:");
 			System.out.println(inputOrderedSet.toString());
-			System.out.println(args[0]+" Imperial List:");
-			System.out.println(inputImperialSet.toString());
+			
 			fileReader.close();
 		}
 		catch (IOException e)
@@ -124,20 +123,16 @@ public class Main
 			e.printStackTrace();
 			System.exit(1);
 		}
-*/		
+	
 		/* 
 		Output the formatted data with header to two separate files named:
 		hr_ordered_set_output.txt and hr_imperial_set_output.txt
 		*/
-/*		try
+		try
 		{	
 			FileWriter fileWriterOrder = new FileWriter("hr_ordered_set_output.txt");
 			fileWriterOrder.write(""+inputOrderedSet.toString());
 			fileWriterOrder.close();
-
-			FileWriter fileWriterImperial = new FileWriter("hr_imperial_set_output.txt");
-			fileWriterImperial.write(inputImperialSet.toString());
-			fileWriterImperial.close();
 		}
 		catch(IOException e)
 		{
@@ -145,6 +140,6 @@ public class Main
 			System.out.println(e);
 			System.exit(1);
 		}
-*/
+
 	} // END main method
 } // END Main class
