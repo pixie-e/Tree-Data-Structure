@@ -8,7 +8,9 @@
 * and in metric! The information is stored in a database file, hr.txt and it’s
 * your task to put it in alphabetical order, with no duplicates
 * 
-* Requirements:
+* Requirements: create a self-sorting, binary tree set with an interface
+* (provided). SortedTreeSet.java class implements the interface and also has 
+* a toString method.
 * 
 * Source(s): <a href="https://www.geeksforgeeks.org/java/command-line-arguments-in-java/">Reviewed command line arguments with search: using command line input java</a>
 * 
